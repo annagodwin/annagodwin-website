@@ -1,0 +1,30 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Editor/IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Claude Code
+.claude/
+
+# Source assets (not needed for deployment)
+anna-godwin-website-assets/
+
+# Node (if added later)
+node_modules/
+npm-debug.log*
+
+# Build artifacts
+.cache/
+dist/
+.tmp/
+
+# Local development
+*.local

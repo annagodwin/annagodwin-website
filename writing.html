@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Anna Godwin's writing on data science, machine learning, and building things that work.">
+  <meta name="author" content="Anna Godwin">
+  <title>Anna Godwin | Writing</title>
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Anna Godwin | Writing">
+  <meta property="og:description" content="Writing on data science, machine learning, and applied ML">
+  <meta property="og:image" content="/assets/images/headshot.jpg">
+  <meta property="og:url" content="https://annagodwin.com/writing">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    const palettes = {
+      a: { primary: '#3D5A5B', secondary: '#A3B4A2', surface: '#D8D4CF', text: '#5C6B73', heading: '#2D3436', background: '#FDFCFA' },
+      b: { primary: '#C9A227', secondary: '#2C3E50', surface: '#F5F0E6', text: '#7D8491', heading: '#3D3229', background: '#FFFEF9' },
+      c: { primary: '#7D6B7D', secondary: '#D4C4BC', surface: '#E5E1DC', text: '#8C7E7A', heading: '#352F2D', background: '#FAF9F7' },
+      d: { primary: '#A65D4E', secondary: '#4A5D4A', surface: '#EDE8E2', text: '#6B6F5C', heading: '#2B2D2A', background: '#FEFDFB' },
+      e: { primary: '#C27D75', secondary: '#5B7B8C', surface: '#EDEBE8', text: '#5F6973', heading: '#2F3437', background: '#FAFAFA' },
+      f: { primary: '#B85C4C', secondary: '#D4A5A5', surface: '#E8DDD4', text: '#6B7B8C', heading: '#2D3436', background: '#FAF9F7' },
+    };
+
+    const p = palettes['a'];
+
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'primary': p.primary,
+            'secondary': p.secondary,
+            'surface': p.surface,
+            'text': p.text,
+            'heading': p.heading,
+            'bg': p.background,
+          },
+          fontFamily: {
+            'sans': ['Inter', 'system-ui', 'sans-serif'],
+            'mono': ['JetBrains Mono', 'monospace'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <link rel="stylesheet" href="/assets/css/styles.css">
+  <style>
+    :root {
+      --color-primary: #3D5A5B;
+      --color-secondary: #A3B4A2;
+      --color-surface: #D8D4CF;
+    }
+  </style>
+</head>
+<body class="bg-bg text-text font-sans">
+  <!-- Navigation -->
+  <nav class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+    <div class="max-w-6xl mx-auto px-6 py-4">
+      <div class="flex items-center justify-between">
+        <a href="/" class="text-primary font-semibold text-lg hover:text-heading transition-colors">
+          Anna Godwin
+        </a>
+
+        <!-- Desktop Navigation -->
+        <div class="hidden md:flex items-center gap-8">
+          <div class="flex items-center gap-6">
+            <a href="/work.html" class="text-heading hover:text-primary transition-colors">Work</a>
+            <a href="/writing.html" class="text-primary font-medium">Writing</a>
+            <a href="/making.html" class="text-heading hover:text-primary transition-colors">Making</a>
+          </div>
+          <div class="flex items-center gap-4 ml-6 pl-6 border-l border-surface">
+            <a href="https://www.linkedin.com/in/anna-godwin" target="_blank" rel="noopener noreferrer" class="text-text hover:text-primary transition-colors" aria-label="LinkedIn">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            </a>
+            <a href="https://github.com/annagodwin" target="_blank" rel="noopener noreferrer" class="text-text hover:text-primary transition-colors" aria-label="GitHub">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+            </a>
+            <a href="https://substack.com/@annagodwin" target="_blank" rel="noopener noreferrer" class="text-text hover:text-primary transition-colors" aria-label="Substack">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M22.539 8.242H1.46V5.406h21.08v2.836zM1.46 10.812V24L12 18.11 22.54 24V10.812H1.46zM22.54 0H1.46v2.836h21.08V0z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <button id="mobile-menu-btn" class="md:hidden text-heading p-2" aria-label="Menu">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4 border-t border-surface pt-4">
+        <div class="flex flex-col gap-4">
+          <a href="/work.html" class="text-heading hover:text-primary transition-colors">Work</a>
+          <a href="/writing.html" class="text-primary font-medium">Writing</a>
+          <a href="/making.html" class="text-heading hover:text-primary transition-colors">Making</a>
+          <div class="flex items-center gap-4 pt-4 border-t border-surface">
+            <a href="https://www.linkedin.com/in/anna-godwin" target="_blank" rel="noopener noreferrer" class="text-text hover:text-primary transition-colors" aria-label="LinkedIn">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            </a>
+            <a href="https://github.com/annagodwin" target="_blank" rel="noopener noreferrer" class="text-text hover:text-primary transition-colors" aria-label="GitHub">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+            </a>
+            <a href="https://substack.com/@annagodwin" target="_blank" rel="noopener noreferrer" class="text-text hover:text-primary transition-colors" aria-label="Substack">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M22.539 8.242H1.46V5.406h21.08v2.836zM1.46 10.812V24L12 18.11 22.54 24V10.812H1.46zM22.54 0H1.46v2.836h21.08V0z"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="pt-24 pb-16">
+    <div class="max-w-6xl mx-auto px-6">
+      <!-- Page Header -->
+      <header class="mb-12">
+        <h1 class="text-4xl md:text-5xl font-bold text-heading mb-4">Writing</h1>
+        <p class="text-lg text-text max-w-2xl">
+          I write about data science, machine learning in practice, and the messy reality of building things that work. Subscribe on Substack to follow along.
+        </p>
+      </header>
+
+      <!-- Substack CTA -->
+      <section class="mb-16">
+        <div class="bg-surface/50 rounded-xl p-8 md:p-12 text-center max-w-2xl mx-auto">
+          <!-- Geometric accent -->
+          <div class="relative inline-block mb-6">
+            <div class="absolute -inset-4 bg-primary/10 rounded-full"></div>
+            <svg class="relative w-16 h-16 text-primary" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M22.539 8.242H1.46V5.406h21.08v2.836zM1.46 10.812V24L12 18.11 22.54 24V10.812H1.46zM22.54 0H1.46v2.836h21.08V0z"/>
+            </svg>
+          </div>
+
+          <h2 class="text-2xl font-semibold text-heading mb-4">Follow on Substack</h2>
+          <p class="text-text mb-6">
+            Thoughts on applied ML, NLP, data pipelines, and the reality of building data science tools in the public sector.
+          </p>
+
+          <a href="https://substack.com/@annagodwin" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-primary text-bg px-8 py-4 rounded-lg font-medium hover:bg-primary/90 transition-colors text-lg">
+            Subscribe on Substack
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+            </svg>
+          </a>
+        </div>
+      </section>
+
+      <div class="section-bar"></div>
+
+      <!-- Recent RTI Articles -->
+      <section>
+        <h2 class="text-2xl font-semibold text-heading mb-6">Recent Articles</h2>
+        <p class="text-text mb-8">
+          Selected articles from RTI Insights and other publications.
+        </p>
+
+        <div class="grid md:grid-cols-2 gap-6">
+
+          <article class="bg-surface/50 rounded-xl p-6 card-hover">
+            <span class="type-badge bg-primary/10 text-primary mb-4 inline-block">RTI Insights</span>
+            <h3 class="text-xl font-semibold text-heading mb-3">
+              <a href="https://www.rti.org/insights/smartreview-data-science-streamline-public-comment-review" target="_blank" rel="noopener noreferrer" class="hover:text-primary transition-colors">
+                RTI SmartReview: Using Data Science to Improve Federal Public Comment Review
+              </a>
+            </h3>
+            <p class="text-text mb-4">
+              How we built an NLP system to help federal agencies review thousands of public comments efficiently.
+            </p>
+            <span class="text-sm text-text/70">2025</span>
+          </article>
+
+          <article class="bg-surface/50 rounded-xl p-6 card-hover">
+            <span class="type-badge bg-primary/10 text-primary mb-4 inline-block">RTI Insights</span>
+            <h3 class="text-xl font-semibold text-heading mb-3">
+              <a href="https://www.rti.org/insights/how-to-use-generative-ai-six-innovations" target="_blank" rel="noopener noreferrer" class="hover:text-primary transition-colors">
+                Six Innovative Generative AI Use Cases
+              </a>
+            </h3>
+            <p class="text-text mb-4">
+              Practical applications of generative AI in research and public sector work.
+            </p>
+            <span class="text-sm text-text/70">2024</span>
+          </article>
+
+          <article class="bg-surface/50 rounded-xl p-6 card-hover">
+            <span class="type-badge bg-primary/10 text-primary mb-4 inline-block">RTI Insights</span>
+            <h3 class="text-xl font-semibold text-heading mb-3">
+              <a href="https://www.rti.org/insights/rapid-offense-text-autocoder" target="_blank" rel="noopener noreferrer" class="hover:text-primary transition-colors">
+                Machine Learning Tool Brings Efficiencies to Criminal Justice Research
+              </a>
+            </h3>
+            <p class="text-text mb-4">
+              Introducing ROTA: an open-source ML tool that automates criminal justice text coding.
+            </p>
+            <span class="text-sm text-text/70">2021</span>
+          </article>
+
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="relative bg-surface/50">
+    <div class="max-w-6xl mx-auto px-6 py-12 relative z-10">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+        <div class="flex items-center gap-6">
+          <a href="https://www.linkedin.com/in/anna-godwin" target="_blank" rel="noopener noreferrer" class="text-text hover:text-primary transition-colors" aria-label="LinkedIn">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </a>
+          <a href="https://github.com/annagodwin" target="_blank" rel="noopener noreferrer" class="text-text hover:text-primary transition-colors" aria-label="GitHub">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+          </a>
+          <a href="https://substack.com/@annagodwin" target="_blank" rel="noopener noreferrer" class="text-text hover:text-primary transition-colors" aria-label="Substack">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M22.539 8.242H1.46V5.406h21.08v2.836zM1.46 10.812V24L12 18.11 22.54 24V10.812H1.46zM22.54 0H1.46v2.836h21.08V0z"/></svg>
+          </a>
+          <a href="https://forms.gle/JLJKX1Az4Rc6ThwWA" target="_blank" rel="noopener noreferrer" class="text-text hover:text-primary transition-colors text-sm">
+            Contact
+          </a>
+        </div>
+        <p class="text-text/70 text-sm">
+          &copy; 2026 Anna Godwin
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/assets/js/main.js"></script>
+</body>
+</html>
