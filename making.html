@@ -110,7 +110,26 @@
         --color-secondary: #a3b4a2;
         --color-surface: #d8d4cf;
       }
-    </style>
+    
+    .gallery-scroll {
+      display: flex;
+      overflow-x: auto;
+      gap: 1rem;
+      padding-bottom: 1rem;
+      scroll-snap-type: x mandatory;
+    }
+    .gallery-scroll .gallery-item {
+      flex: 0 0 auto;
+      width: 280px;
+      scroll-snap-align: start;
+      cursor: pointer;
+    }
+    .gallery-scroll img {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+    }
+  </style>
   </head>
   <body class="bg-bg text-text font-sans">
     <!-- Navigation -->
@@ -243,70 +262,8 @@
 
         <!-- Gallery: Quilts -->
         <section class="mb-16">
-          <h2 class="text-2xl font-semibold text-heading mb-6">Quilts</h2>
-          <div class="gallery-grid">
-
-            <!-- TODO: Upload assets/images/making/11-quilt-happy-stripes.jpg, then uncomment:
-            <div class="gallery-item"
-              data-title="Happy Stripes Quilt"
-              data-description="&quot;Happy Stripes&quot; pattern by Emily Denis. Sunbeam fabric by Rashida Coleman-Hale of Ruby Star Society. Made as a graduation gift, 2025."
-            >
-              <img
-                src="/assets/images/making/11-quilt-happy-stripes.jpg"
-                alt="Happy Stripes Quilt - Vibrant pink, yellow, and magenta half-square triangle quilt"
-              />
-            </div>
-            -->
-
-            <!-- TODO: Upload assets/images/making/12-quilt-cincinnati.jpg, then uncomment:
-            <div class="gallery-item"
-              data-title="Cincinnati Quilt"
-              data-description="Modified &quot;Cincinnati&quot; pattern by Suzy Quilts. Black and white Kona fabric with Charley Harper panel on front and backing. Finished late 2024."
-            >
-              <img
-                src="/assets/images/making/12-quilt-cincinnati.jpg"
-                alt="Cincinnati Quilt - Black and white geometric quilt with Charley Harper bird panel center"
-              />
-            </div>
-            -->
-
-            <!-- TODO: Upload assets/images/making/13-quilt-puff.jpg, then uncomment:
-            <div class="gallery-item"
-              data-title="Puff Quilt"
-              data-description="Finished puff quilt with 3.3 pounds of polyfil. Nature-print fabrics in teal, cream, and earth tones."
-            >
-              <img
-                src="/assets/images/making/13-quilt-puff.jpg"
-                alt="Puff Quilt - Finished puff quilt in teal, cream, and earth tone fabrics"
-              />
-            </div>
-            -->
-
-            <div class="gallery-item"
-              data-title="Desert Medallion Quilt"
-              data-description="Trip-around-the-world medallion quilt with desert-themed fabrics: camels, buildings, moons."
-            >
-              <img
-                src="/assets/images/making/09-quilt-medallion-desert.jpg"
-                alt="Desert Medallion Quilt - Medallion quilt with desert-themed fabrics"
-              />
-            </div>
-            <div class="gallery-item"
-              data-title="Autumn Pinwheel Quilt"
-              data-description="Pinwheel block quilt in autumn colors with nature-themed prints: mushrooms, foxes, botanicals."
-            >
-              <img
-                src="/assets/images/making/10-quilt-pinwheel-autumn.jpg"
-                alt="Autumn Pinwheel Quilt - Pinwheel block quilt in autumn colors"
-              />
-            </div>
-          </div>
-        </section>
-
-        <!-- Gallery: Enameling & Metalwork -->
-        <section>
-          <h2 class="text-2xl font-semibold text-heading mb-6">Enameling &amp; Metalwork</h2>
-          <div class="gallery-grid">
+          <h2 class="text-2xl font-semibold text-heading mb-6">Metalwork</h2>
+          <div class="gallery-scroll">
 
             <!-- TODO: Upload assets/images/making/14-enamel-bowl-green.jpg, then uncomment:
             <div class="gallery-item"
@@ -390,6 +347,68 @@
               <img
                 src="/assets/images/making/08-brass-cuff-geometric.jpg"
                 alt="Geometric Brass Cuff - Etched brass cuff bracelet with geometric pattern"
+              />
+            </div>
+          </div>
+        </section>
+
+        <!-- Gallery: Enameling & Metalwork -->
+        <section class="mb-16">
+          <h2 class="text-2xl font-semibold text-heading mb-6">Quilting</h2>
+          <div class="gallery-scroll">
+
+            <!-- TODO: Upload assets/images/making/11-quilt-happy-stripes.jpg, then uncomment:
+            <div class="gallery-item"
+              data-title="Happy Stripes Quilt"
+              data-description="&quot;Happy Stripes&quot; pattern by Emily Denis. Sunbeam fabric by Rashida Coleman-Hale of Ruby Star Society. Made as a graduation gift, 2025."
+            >
+              <img
+                src="/assets/images/making/11-quilt-happy-stripes.jpg"
+                alt="Happy Stripes Quilt - Vibrant pink, yellow, and magenta half-square triangle quilt"
+              />
+            </div>
+            -->
+
+            <!-- TODO: Upload assets/images/making/12-quilt-cincinnati.jpg, then uncomment:
+            <div class="gallery-item"
+              data-title="Cincinnati Quilt"
+              data-description="Modified &quot;Cincinnati&quot; pattern by Suzy Quilts. Black and white Kona fabric with Charley Harper panel on front and backing. Finished late 2024."
+            >
+              <img
+                src="/assets/images/making/12-quilt-cincinnati.jpg"
+                alt="Cincinnati Quilt - Black and white geometric quilt with Charley Harper bird panel center"
+              />
+            </div>
+            -->
+
+            <!-- TODO: Upload assets/images/making/13-quilt-puff.jpg, then uncomment:
+            <div class="gallery-item"
+              data-title="Puff Quilt"
+              data-description="Finished puff quilt with 3.3 pounds of polyfil. Nature-print fabrics in teal, cream, and earth tones."
+            >
+              <img
+                src="/assets/images/making/13-quilt-puff.jpg"
+                alt="Puff Quilt - Finished puff quilt in teal, cream, and earth tone fabrics"
+              />
+            </div>
+            -->
+
+            <div class="gallery-item"
+              data-title="Desert Medallion Quilt"
+              data-description="Trip-around-the-world medallion quilt with desert-themed fabrics: camels, buildings, moons."
+            >
+              <img
+                src="/assets/images/making/09-quilt-medallion-desert.jpg"
+                alt="Desert Medallion Quilt - Medallion quilt with desert-themed fabrics"
+              />
+            </div>
+            <div class="gallery-item"
+              data-title="Autumn Pinwheel Quilt"
+              data-description="Pinwheel block quilt in autumn colors with nature-themed prints: mushrooms, foxes, botanicals."
+            >
+              <img
+                src="/assets/images/making/10-quilt-pinwheel-autumn.jpg"
+                alt="Autumn Pinwheel Quilt - Pinwheel block quilt in autumn colors"
               />
             </div>
           </div>
