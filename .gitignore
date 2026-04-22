@@ -28,3 +28,6 @@ dist/
 
 # Local development
 *.local
+
+# Test artifacts
+test-screenshots/

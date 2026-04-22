@@ -206,7 +206,9 @@ nav {
 
 /* Card hover effects */
 .card-hover {
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
 .card-hover:hover {
@@ -224,7 +226,9 @@ nav {
   justify-content: center;
   opacity: 0;
   visibility: hidden;
-  transition: opacity 0.3s ease, visibility 0.3s ease;
+  transition:
+    opacity 0.3s ease,
+    visibility 0.3s ease;
 }
 
 .lightbox.active {
@@ -481,9 +485,12 @@ button:focus-visible {
 main {
   position: relative;
   z-index: 1;
+  transition: margin-top 0.2s ease;
 }
 
-header, section, footer {
+header,
+section,
+footer {
   position: relative;
   z-index: 1;
 }
